@@ -1,5 +1,4 @@
-import { useContext } from 'react';
-import { Context } from '../hooks/ExpenseTrackerContext';
+import { useExpenseTrackerContext } from "../providers/ExpenseTrackerContext";
 
 const TransactionForm = () => {
   const {
@@ -10,7 +9,7 @@ const TransactionForm = () => {
     setExpenses,
     setExpense,
     setIncome,
-  } = useContext(Context);
+  } = useExpenseTrackerContext();
 
   function addTransaction(e) {
     e.preventDefault();
@@ -29,15 +28,15 @@ const TransactionForm = () => {
     } else {
       setExpense((prev) => Number(prev) + Number(amount));
     }
-    setAmount('');
-    setItem('');
+    setAmount("");
+    setItem("");
   }
   return (
     <form onSubmit={addTransaction}>
-      <h2 className="font-semibold text-xl border-b-2 py-2">
+      <h2 className="border-b-2 py-2 text-xl font-semibold">
         Add new transaction
       </h2>
-      <div className="flex flex-col gap-2 my-4 ">
+      <div className="my-4 flex flex-col gap-2 ">
         <label htmlFor="transaction" className="font-semibold">
           Text
         </label>
@@ -52,7 +51,7 @@ const TransactionForm = () => {
           required
         />
       </div>
-      <div className="flex flex-col gap-2 my-4 ">
+      <div className="my-4 flex flex-col gap-2 ">
         <label htmlFor="transaction" className="font-semibold">
           Amount <br /> (negative -expense, positive - income
         </label>
@@ -67,7 +66,7 @@ const TransactionForm = () => {
         />
       </div>
 
-      <button className="bg-[#916dde] w-full text-white py-2">
+      <button className="w-full bg-[#916dde] py-2 text-white">
         Add transaction
       </button>
     </form>

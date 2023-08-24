@@ -1,5 +1,5 @@
-import ExpenseTracker from './components/ExpenseTracker';
-import ExpenseTrackerContext from './hooks/ExpenseTrackerContext';
+import ExpenseTracker from "./components/ExpenseTracker";
+import ExpenseTrackerContext from "./providers/ExpenseTrackerContext";
 
 function App() {
   return (

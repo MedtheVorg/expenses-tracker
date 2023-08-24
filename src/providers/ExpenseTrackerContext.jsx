@@ -1,10 +1,10 @@
-import { createContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
 export const Context = createContext({});
 
 const ExpenseTrackerContext = ({ children }) => {
-  const [item, setItem] = useState('');
-  const [amount, setAmount] = useState('');
+  const [item, setItem] = useState("");
+  const [amount, setAmount] = useState("");
   const [expenses, setExpenses] = useState([]);
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
@@ -27,4 +27,9 @@ const ExpenseTrackerContext = ({ children }) => {
     </Context.Provider>
   );
 };
+
+export function useExpenseTrackerContext() {
+  return useContext(Context);
+}
+
 export default ExpenseTrackerContext;
