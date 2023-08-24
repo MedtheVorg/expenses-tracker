@@ -21,7 +21,7 @@ const Record = (props) => {
         <FaTrash />
       </button>
       <div className="flex flex-1 items-center justify-between px-4">
-        <p className="capitalize">{label}</p>
+        <p className="break-words capitalize">{label}</p>
         <p> {cost}</p>
       </div>
       {type ? (

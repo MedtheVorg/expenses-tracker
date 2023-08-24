@@ -605,6 +605,10 @@ video {
   gap: 1rem;
 }
 
+.break-words {
+  overflow-wrap: break-word;
+}
+
 .border-2 {
   border-width: 2px;
 }
@@ -745,4 +749,10 @@ video {
 
 .focus\:outline-purple-800:focus {
   outline-color: #6b21a8;
+}
+
+@media (min-width: 1024px) {
+  .lg\:max-w-\[80\%\] {
+    max-width: 80%;
+  }
 }
