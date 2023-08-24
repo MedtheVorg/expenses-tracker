@@ -18,11 +18,11 @@ const Record = (props) => {
   return (
     <li className="flex h-full w-full items-center justify-between font-semibold shadow-xl  ">
       <button className="border-2 p-2" onClick={removeRecord}>
-        <FaTrash />
+        <FaTrash color="E34C67" />
       </button>
       <div className="flex flex-1 items-center justify-between px-4">
         <p className="break-words capitalize">{label}</p>
-        <p> {cost}</p>
+        <p> {Number(cost)}</p>
       </div>
       {type ? (
         <div className={`h-[40px] w-[5px]  bg-green-500`}></div>

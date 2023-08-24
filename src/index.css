@@ -1,8 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;300;400;500;600;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+
+
+/* @font-face {
   font-family: 'Bitter';
   src: local('Bitter'), url('./fonts/Bitter/Bitter-Medium.ttf') format('ttf');
+} */
+
+
+html{
+  height: 100vh;
+  min-height: 100vh;
 }
+
+body{
+  background-image: url('./assets/background.svg') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+#root{
+  max-width: 600px;
+  width: 100%;
+  font-family: 'Bitter', serif;
+}
+
